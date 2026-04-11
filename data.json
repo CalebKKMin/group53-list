@@ -33,167 +33,160 @@
       },
       {
         "role": "3",
-        "name": "이수민",
-        "gender": "여",
-        "year": "94",
-        "photo": "image5.png"
-      },
-      {
-        "role": "4",
         "name": "이혜연",
         "gender": "여",
         "year": "94",
         "photo": "image6.png"
       },
       {
-        "role": "5",
+        "role": "4",
         "name": "김민석",
         "gender": "남",
         "year": "95",
         "photo": "image7.png"
       },
       {
-        "role": "6",
+        "role": "5",
         "name": "양일권",
         "gender": "남",
         "year": "95",
         "photo": "image8.png"
       },
       {
-        "role": "7",
+        "role": "6",
         "name": "김찬양",
         "gender": "여",
         "year": "95",
         "photo": "image9.png"
       },
       {
-        "role": "8",
+        "role": "7",
         "name": "설명은",
         "gender": "여",
         "year": "95",
         "photo": null
       },
       {
-        "role": "9",
+        "role": "8",
         "name": "김기은",
         "gender": "여",
         "year": "95",
         "photo": null
       },
       {
-        "role": "10",
+        "role": "9",
         "name": "이주영",
         "gender": "남",
         "year": "96",
         "photo": "image10.png"
       },
       {
-        "role": "11",
+        "role": "10",
         "name": "이진영",
         "gender": "여",
         "year": "96",
         "photo": "image11.png"
       },
       {
-        "role": "12",
+        "role": "11",
         "name": "신주영",
         "gender": "남",
         "year": "97",
         "photo": "image12.png"
       },
       {
-        "role": "13",
+        "role": "12",
         "name": "권은혜",
         "gender": "여",
         "year": "97",
         "photo": "image13.png"
       },
       {
-        "role": "14",
+        "role": "13",
         "name": "류영인",
         "gender": "여",
         "year": "97",
         "photo": null
       },
       {
-        "role": "15",
+        "role": "14",
         "name": "이후광",
         "gender": "남",
         "year": "98",
         "photo": null
       },
       {
-        "role": "16",
+        "role": "15",
         "name": "김예란",
         "gender": "여",
         "year": "98",
         "photo": "image14.png"
       },
       {
-        "role": "17",
+        "role": "16",
         "name": "방진성",
         "gender": "남",
         "year": "99",
         "photo": "image15.png"
       },
       {
-        "role": "18",
+        "role": "17",
         "name": "손여산",
         "gender": "남",
         "year": "99",
         "photo": "image16.png"
       },
       {
-        "role": "19",
+        "role": "18",
         "name": "김해인",
         "gender": "여",
         "year": "99",
         "photo": "image21.png"
       },
       {
-        "role": "20",
+        "role": "19",
         "name": "문혜진",
         "gender": "여",
         "year": "99",
         "photo": "image17.png"
       },
       {
-        "role": "21",
+        "role": "20",
         "name": "이은수",
         "gender": "여",
         "year": "99",
         "photo": "image18.png"
       },
       {
-        "role": "22",
+        "role": "21",
         "name": "신성욱",
         "gender": "남",
         "year": "00",
         "photo": "image19.jpeg"
       },
       {
-        "role": "23",
+        "role": "22",
         "name": "이정한",
         "gender": "남",
         "year": "00",
         "photo": "image20.png"
       },
       {
-        "role": "24",
+        "role": "23",
         "name": "김세리",
         "gender": "여",
         "year": "00",
         "photo": null
       },
       {
-        "role": "25",
+        "role": "24",
         "name": "이유나",
         "gender": "여",
         "year": "00",
         "photo": "image23.jpeg"
       },
       {
-        "role": "26",
+        "role": "25",
         "name": "주수연",
         "gender": "여",
         "year": "00",
@@ -528,31 +521,38 @@
       },
       {
         "role": "18",
-        "name": "장은수",
-        "gender": "여",
-        "year": "99",
-        "photo": "image54.png"
-      },
-      {
-        "role": "19",
         "name": "이준혁",
         "gender": "남",
         "year": "00",
         "photo": "image56.jpg"
       },
       {
-        "role": "20",
+        "role": "19",
         "name": "김영서",
         "gender": "여",
         "year": "00",
         "photo": null
       },
       {
-        "role": "21",
+        "role": "20",
         "name": "허차령",
         "gender": "여",
         "year": "00",
         "photo": "image55.png"
+      },
+      {
+        "role": "21",
+        "name": "조성희",
+        "gender": "여",
+        "year": "96",
+        "photo": "image64.png"
+      },
+      {
+        "role": "22",
+        "name": "민주영",
+        "gender": "남",
+        "year": "97",
+        "photo": null
       }
     ]
   },
@@ -625,118 +625,104 @@
       },
       {
         "role": "7",
-        "name": "조성희",
-        "gender": "여",
-        "year": "96",
-        "photo": "image64.png"
-      },
-      {
-        "role": "8",
         "name": "이재혁",
         "gender": "남",
         "year": "97",
         "photo": null
       },
       {
-        "role": "9",
+        "role": "8",
         "name": "김주은",
         "gender": "여",
         "year": "97",
         "photo": "image65.png"
       },
       {
-        "role": "10",
-        "name": "정훈서",
-        "gender": "남",
-        "year": "98",
-        "photo": "image75.png"
-      },
-      {
-        "role": "11",
+        "role": "9",
         "name": "나현진",
         "gender": "여",
         "year": "98",
         "photo": "image66.png"
       },
       {
-        "role": "12",
+        "role": "10",
         "name": "서안",
         "gender": "남",
         "year": "99",
         "photo": "image67.png"
       },
       {
-        "role": "13",
+        "role": "11",
         "name": "정주영",
         "gender": "남",
         "year": "99",
         "photo": "image68.png"
       },
       {
-        "role": "14",
+        "role": "12",
         "name": "박한나",
         "gender": "여",
         "year": "99",
         "photo": null
       },
       {
-        "role": "15",
+        "role": "13",
         "name": "변환희",
         "gender": "남",
         "year": "99",
         "photo": "image69.png"
       },
       {
-        "role": "16",
+        "role": "14",
         "name": "정예진",
         "gender": "여",
         "year": "99",
         "photo": null
       },
       {
-        "role": "17",
+        "role": "15",
         "name": "김예진",
         "gender": "여",
         "year": "00",
         "photo": "image76.jpeg"
       },
       {
-        "role": "18",
+        "role": "16",
         "name": "이주안",
         "gender": "여",
         "year": "00",
         "photo": null
       },
       {
-        "role": "19",
+        "role": "17",
         "name": "전영현",
         "gender": "여",
         "year": "98",
         "photo": "image71.png"
       },
       {
-        "role": "20",
+        "role": "18",
         "name": "방효석",
         "gender": "남",
         "year": "00",
         "photo": "image70.png"
       },
       {
-        "role": "21",
+        "role": "19",
         "name": "이현수",
         "gender": "남",
         "year": "00",
         "photo": "image72.png"
       },
       {
-        "role": "22",
+        "role": "20",
         "name": "윤빈",
         "gender": "남",
         "year": "95",
         "photo": "image73.png"
       },
       {
-        "role": "23",
+        "role": "21",
         "name": "김상혁",
         "gender": "남",
         "year": "95",
@@ -855,55 +841,48 @@
       },
       {
         "role": "14",
-        "name": "이호경",
-        "gender": "남",
-        "year": "99",
-        "photo": "image84.png"
-      },
-      {
-        "role": "15",
         "name": "정하선",
         "gender": "여",
         "year": "99",
         "photo": "image85.png"
       },
       {
-        "role": "16",
+        "role": "15",
         "name": "이호진",
         "gender": "남",
         "year": "00",
         "photo": "image89.jpeg"
       },
       {
-        "role": "17",
+        "role": "16",
         "name": "나유진",
         "gender": "여",
         "year": "00",
         "photo": "image86.png"
       },
       {
-        "role": "18",
+        "role": "17",
         "name": "이채우",
         "gender": "여",
         "year": "00",
         "photo": "image90.jpg"
       },
       {
-        "role": "19",
+        "role": "18",
         "name": "이은채",
         "gender": "여",
         "year": "00",
         "photo": "image91.png"
       },
       {
-        "role": "20",
+        "role": "19",
         "name": "최현준",
         "gender": "남",
         "year": "95",
         "photo": "image87.png"
       },
       {
-        "role": "21",
+        "role": "20",
         "name": "문훈",
         "gender": "남",
         "year": "00",
@@ -1260,7 +1239,7 @@
       {
         "role": "23",
         "name": "김운학",
-        "gender": "남",
+        "gender": "남 ",
         "year": "96",
         "photo": "image126.jpeg"
       },
@@ -1270,6 +1249,13 @@
         "gender": "여",
         "year": "94",
         "photo": "image127.png"
+      },
+      {
+        "role": "25",
+        "name": "정훈서",
+        "gender": "남",
+        "year": "98",
+        "photo": "image75.png"
       }
     ]
   },
@@ -1451,6 +1437,13 @@
         "gender": "남",
         "year": "94",
         "photo": "image143.png"
+      },
+      {
+        "role": "24",
+        "name": "윤영은",
+        "gender": "여",
+        "year": "96",
+        "photo": null
       }
     ]
   },
@@ -1604,6 +1597,34 @@
         "gender": "여",
         "year": "00",
         "photo": "image157.png"
+      },
+      {
+        "role": "19",
+        "name": "국예진",
+        "gender": "여",
+        "year": "97",
+        "photo": "image201.png"
+      },
+      {
+        "role": "20",
+        "name": "박지수",
+        "gender": "여",
+        "year": "98",
+        "photo": null
+      },
+      {
+        "role": "21",
+        "name": "허차민",
+        "gender": "여",
+        "year": "97",
+        "photo": null
+      },
+      {
+        "role": "22",
+        "name": "임지은",
+        "gender": "여",
+        "year": "97",
+        "photo": null
       }
     ]
   },
@@ -1778,6 +1799,20 @@
         "gender": "여",
         "year": "00",
         "photo": null
+      },
+      {
+        "role": "23",
+        "name": "이수민",
+        "gender": "여",
+        "year": "94",
+        "photo": "image5.png"
+      },
+      {
+        "role": "24",
+        "name": "장은수",
+        "gender": "여",
+        "year": "99",
+        "photo": "image54.png"
       }
     ]
   },
@@ -1952,6 +1987,13 @@
         "gender": "남",
         "year": "97",
         "photo": "image184.png"
+      },
+      {
+        "role": "22",
+        "name": "이호경",
+        "gender": "남",
+        "year": "99",
+        "photo": "image84.png"
       }
     ]
   },
@@ -2038,125 +2080,118 @@
       },
       {
         "role": "9",
-        "name": "국예진",
-        "gender": "여",
-        "year": "97",
-        "photo": "image201.png"
-      },
-      {
-        "role": "10",
         "name": "이예솜",
         "gender": "여",
         "year": "97",
         "photo": null
       },
       {
-        "role": "11",
+        "role": "10",
         "name": "최서은",
         "gender": "여",
         "year": "97",
         "photo": "image202.png"
       },
       {
-        "role": "12",
+        "role": "11",
         "name": "이준영",
         "gender": "남",
         "year": "98",
         "photo": "image194.png"
       },
       {
-        "role": "13",
+        "role": "12",
         "name": "조은일",
         "gender": "남",
         "year": "98",
         "photo": "image203.png"
       },
       {
-        "role": "14",
+        "role": "13",
         "name": "김수아",
         "gender": "여",
         "year": "98",
         "photo": "image204.png"
       },
       {
-        "role": "15",
+        "role": "14",
         "name": "양세연",
         "gender": "여",
         "year": "98",
         "photo": "image205.png"
       },
       {
-        "role": "16",
+        "role": "15",
         "name": "윤혜수",
         "gender": "여",
         "year": "98",
         "photo": "image206.png"
       },
       {
-        "role": "17",
+        "role": "16",
         "name": "박해성",
         "gender": "남",
         "year": "98",
         "photo": "image207.png"
       },
       {
-        "role": "18",
+        "role": "17",
         "name": "이태휘",
         "gender": "남",
         "year": "99",
         "photo": "image208.png"
       },
       {
-        "role": "19",
+        "role": "18",
         "name": "윤지현",
         "gender": "여",
         "year": "99",
         "photo": "image209.png"
       },
       {
-        "role": "20",
+        "role": "19",
         "name": "류희승",
         "gender": "남",
         "year": "99",
         "photo": "image210.png"
       },
       {
-        "role": "21",
+        "role": "20",
         "name": "이주은",
         "gender": "여",
         "year": "99",
         "photo": "image211.png"
       },
       {
-        "role": "22",
+        "role": "21",
         "name": "한지희",
         "gender": "여",
         "year": "99",
         "photo": "image212.png"
       },
       {
-        "role": "23",
+        "role": "22",
         "name": "손연호",
         "gender": "여",
         "year": "00",
         "photo": "image213.png"
       },
       {
-        "role": "24",
+        "role": "23",
         "name": "김다현",
         "gender": "여",
         "year": "00",
         "photo": "image215.jpeg"
       },
       {
-        "role": "25",
+        "role": "24",
         "name": "이시원",
         "gender": "여",
         "year": "00",
         "photo": "image216.jpg"
       },
       {
-        "role": "26",
+        "role": "25",
         "name": "조성아",
         "gender": "여",
         "year": "00",
