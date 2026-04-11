@@ -397,7 +397,7 @@
 
 <header>
   <h1>⛪ 2026년 청년 53교구</h1>
-  <p>순별 멤버 조회 시스템</p>
+  <p>순별 조회 시스템</p>
 </header>
 
 <!-- 순 탭 -->
@@ -507,7 +507,8 @@ function buildTabs() {
     const btn = document.createElement('button');
     btn.className = 'tab-btn';
     btn.dataset.tab = String(g.id);
-    btn.textContent = g.name;
+    const leader = g.members.find(m => m.role === '순장');
+    btn.textContent = g.name + (leader ? ' ' + leader.name : '');
     nav.appendChild(btn);
   });
   nav.addEventListener('click', e => {
