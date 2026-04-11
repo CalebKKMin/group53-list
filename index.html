@@ -9,7 +9,6 @@
       --primary: #4f46e5;
       --primary-light: #6366f1;
       --primary-dark: #3730a3;
-      --secondary: #06b6d4;
       --accent: #f59e0b;
       --male: #3b82f6;
       --female: #ec4899;
@@ -23,9 +22,7 @@
       --shadow: 0 4px 6px -1px rgba(0,0,0,.08), 0 2px 4px -1px rgba(0,0,0,.04);
       --shadow-lg: 0 10px 25px -5px rgba(0,0,0,.1), 0 4px 6px -2px rgba(0,0,0,.05);
     }
-
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
     body {
       font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, '맑은 고딕', sans-serif;
       background: var(--bg);
@@ -36,7 +33,7 @@
     /* ── 헤더 ── */
     header {
       background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
-      padding: 24px 20px 20px;
+      padding: 20px 20px 16px;
       text-align: center;
       color: #fff;
       box-shadow: var(--shadow-lg);
@@ -44,14 +41,13 @@
       top: 0;
       z-index: 100;
     }
-    header h1 { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.5px; }
-    header p  { font-size: .85rem; opacity: .85; margin-top: 4px; }
+    header h1 { font-size: 1.4rem; font-weight: 800; letter-spacing: -0.5px; }
+    header p  { font-size: .82rem; opacity: .85; margin-top: 3px; }
 
     /* ── 탭 네비 ── */
     .tab-nav {
       display: flex;
       overflow-x: auto;
-      gap: 0;
       background: var(--primary-dark);
       scrollbar-width: none;
     }
@@ -76,60 +72,103 @@
     .filter-bar {
       display: flex;
       flex-wrap: wrap;
+      align-items: center;
       gap: 8px;
-      padding: 14px 16px;
+      padding: 12px 16px;
       background: var(--card);
       border-bottom: 1px solid var(--border);
       position: sticky;
-      top: 90px;
+      top: 82px;
       z-index: 90;
       box-shadow: 0 2px 6px rgba(0,0,0,.06);
     }
-    .filter-group { display: flex; align-items: center; gap: 6px; }
-    .filter-label { font-size: .75rem; font-weight: 600; color: var(--text-muted); }
+    .filter-group { display: flex; align-items: center; gap: 5px; flex-wrap: wrap; }
+    .filter-label { font-size: .72rem; font-weight: 700; color: var(--text-muted); white-space: nowrap; }
     .chip {
-      padding: 5px 12px;
+      padding: 4px 11px;
       border-radius: 20px;
       border: 1.5px solid var(--border);
       background: #fff;
-      font-size: .78rem;
+      font-size: .76rem;
       font-weight: 600;
       cursor: pointer;
       color: var(--text-muted);
       transition: all .2s;
     }
     .chip:hover { border-color: var(--primary-light); color: var(--primary); }
-    .chip.active { background: var(--primary); border-color: var(--primary); color: #fff; }
-    .chip.male.active   { background: var(--male); border-color: var(--male); }
-    .chip.female.active { background: var(--female); border-color: var(--female); }
-    .chip.year.active   { background: var(--accent); border-color: var(--accent); color: #fff; }
-    .chip.leader.active  { background: var(--leader); border-color: var(--leader); }
-    .chip.vleader.active { background: var(--vleader); border-color: var(--vleader); }
-    .chip.member.active  { background: #10b981; border-color: #10b981; }
+    .chip.active          { background: var(--primary); border-color: var(--primary); color: #fff; }
+    .chip.male.active     { background: var(--male);    border-color: var(--male); }
+    .chip.female.active   { background: var(--female);  border-color: var(--female); }
+    .chip.year.active     { background: var(--accent);  border-color: var(--accent); color: #fff; }
+    .chip.leader.active   { background: var(--leader);  border-color: var(--leader); }
+    .chip.vleader.active  { background: var(--vleader); border-color: var(--vleader); }
+    .chip.member.active   { background: #10b981;        border-color: #10b981; }
 
-    /* ── 통계 바 ── */
+    /* ── 뷰 토글 ── */
+    .view-toggle {
+      display: flex;
+      gap: 4px;
+      margin-left: auto;
+      background: #f1f5f9;
+      border-radius: 10px;
+      padding: 3px;
+    }
+    .view-btn {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 5px 12px;
+      border-radius: 8px;
+      border: none;
+      background: transparent;
+      font-size: .76rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all .2s;
+    }
+    .view-btn.active { background: #fff; color: var(--primary); box-shadow: 0 1px 4px rgba(0,0,0,.1); }
+    .view-btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+    /* ── 검색 + 통계 ── */
+    .search-stats {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      background: #f8fafc;
+      border-bottom: 1px solid var(--border);
+    }
+    .search-input {
+      flex: 1;
+      padding: 8px 14px;
+      border-radius: 10px;
+      border: 1.5px solid var(--border);
+      font-size: .86rem;
+      outline: none;
+      transition: border-color .2s;
+      background: #fff;
+    }
+    .search-input:focus { border-color: var(--primary-light); }
     .stats-bar {
       display: flex;
-      gap: 12px;
-      padding: 10px 16px;
-      background: #f1f5f9;
-      border-bottom: 1px solid var(--border);
-      font-size: .78rem;
+      gap: 10px;
+      font-size: .76rem;
       flex-wrap: wrap;
+      flex-shrink: 0;
     }
-    .stat-item { display: flex; align-items: center; gap: 4px; }
-    .stat-dot  { width: 8px; height: 8px; border-radius: 50%; }
+    .stat-item { display: flex; align-items: center; gap: 3px; }
+    .stat-dot  { width: 7px; height: 7px; border-radius: 50%; }
     .stat-val  { font-weight: 700; }
     .stat-lbl  { color: var(--text-muted); }
 
-    /* ── 카드 그리드 ── */
+    /* ── 카드 뷰 ── */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
       gap: 14px;
       padding: 16px;
     }
-
     .card {
       background: var(--card);
       border-radius: 14px;
@@ -137,66 +176,53 @@
       box-shadow: var(--shadow);
       transition: transform .2s, box-shadow .2s;
       cursor: pointer;
-      position: relative;
       border: 2px solid transparent;
     }
-    .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
     .card.role-leader  { border-color: var(--leader); }
     .card.role-vleader { border-color: var(--vleader); }
 
+    /* 사진 컨테이너: 항상 1:1 비율 고정 */
     .card-photo {
       width: 100%;
-      aspect-ratio: 1;
-      object-fit: cover;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
       background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.5rem;
+      flex-shrink: 0;
     }
     .card-photo img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      display: block;
     }
     .no-photo {
       width: 100%;
-      aspect-ratio: 1;
+      aspect-ratio: 1 / 1;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 2.8rem;
-      background: linear-gradient(135deg, #ede9fe, #ddd6fe);
     }
-    .no-photo.male   { background: linear-gradient(135deg, #dbeafe, #bfdbfe); }
-    .no-photo.female { background: linear-gradient(135deg, #fce7f3, #fbcfe8); }
+    .no-photo.남 { background: linear-gradient(135deg, #dbeafe, #bfdbfe); }
+    .no-photo.여 { background: linear-gradient(135deg, #fce7f3, #fbcfe8); }
 
-    .card-body { padding: 10px 10px 12px; }
+    .card-body { padding: 9px 10px 11px; }
     .card-role-badge {
       display: inline-flex;
       align-items: center;
-      gap: 3px;
       padding: 2px 8px;
       border-radius: 10px;
-      font-size: .65rem;
+      font-size: .63rem;
       font-weight: 700;
-      margin-bottom: 5px;
+      margin-bottom: 4px;
     }
     .badge-leader  { background: #ede9fe; color: var(--leader); }
     .badge-vleader { background: #cffafe; color: var(--vleader); }
     .badge-member  { background: #f0fdf4; color: #16a34a; }
 
-    .card-name {
-      font-size: .92rem;
-      font-weight: 700;
-      color: var(--text);
-    }
-    .card-meta {
-      display: flex;
-      gap: 6px;
-      margin-top: 5px;
-      font-size: .73rem;
-    }
+    .card-name { font-size: .9rem; font-weight: 700; }
+    .card-meta { display: flex; gap: 5px; margin-top: 5px; font-size: .71rem; }
     .gender-tag {
       padding: 1px 7px;
       border-radius: 8px;
@@ -210,6 +236,71 @@
       background: #fef3c7;
       color: #92400e;
       font-weight: 600;
+    }
+
+    /* ── 목록 뷰 ── */
+    .list-view { padding: 8px 16px 16px; display: flex; flex-direction: column; gap: 6px; }
+    .list-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--card);
+      border-radius: 12px;
+      padding: 10px 14px 10px 10px;
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      border: 1.5px solid transparent;
+      transition: transform .15s, box-shadow .15s;
+    }
+    .list-item:hover { transform: translateX(3px); box-shadow: var(--shadow-lg); }
+    .list-item.role-leader  { border-color: var(--leader); }
+    .list-item.role-vleader { border-color: var(--vleader); }
+
+    .list-photo {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+    }
+    .list-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .list-no-photo {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+    .list-no-photo.남 { background: linear-gradient(135deg, #dbeafe, #bfdbfe); }
+    .list-no-photo.여 { background: linear-gradient(135deg, #fce7f3, #fbcfe8); }
+
+    .list-info { flex: 1; min-width: 0; }
+    .list-name { font-size: .92rem; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .list-sub  { display: flex; align-items: center; gap: 5px; margin-top: 4px; }
+    .list-right { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; flex-shrink: 0; }
+
+    /* ── 그룹 헤더 ── */
+    .group-section { margin-bottom: 20px; }
+    .group-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 11px 16px;
+      background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: #fff;
+      font-weight: 700;
+      font-size: .92rem;
+    }
+    .g-count {
+      margin-left: auto;
+      background: rgba(255,255,255,.25);
+      padding: 2px 10px;
+      border-radius: 10px;
+      font-size: .76rem;
     }
 
     /* ── 모달 ── */
@@ -231,43 +322,35 @@
       width: 100%;
       overflow: hidden;
       box-shadow: 0 25px 50px -12px rgba(0,0,0,.35);
-      animation: modalIn .25s ease;
+      animation: modalIn .22s ease;
     }
     @keyframes modalIn {
-      from { transform: scale(.9) translateY(20px); opacity: 0; }
-      to   { transform: scale(1) translateY(0);    opacity: 1; }
+      from { transform: scale(.9) translateY(16px); opacity: 0; }
+      to   { transform: scale(1) translateY(0);     opacity: 1; }
     }
-    .modal-photo {
+    .modal-photo-wrap {
       width: 100%;
-      max-height: 260px;
-      object-fit: cover;
+      height: 220px;
+      overflow: hidden;
       background: linear-gradient(135deg, #ede9fe, #c7d2fe);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 5rem;
     }
-    .modal-photo img { width: 100%; max-height: 260px; object-fit: cover; }
-    .modal-content { padding: 20px; }
+    .modal-photo-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .modal-no-photo { font-size: 5rem; }
+    .modal-content  { padding: 18px 20px 20px; }
     .modal-role-badge {
       display: inline-flex;
       padding: 3px 12px;
       border-radius: 12px;
-      font-size: .75rem;
+      font-size: .74rem;
       font-weight: 700;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
-    .modal-name {
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: var(--text);
-    }
-    .modal-group { font-size: .85rem; color: var(--text-muted); margin-top: 2px; }
-    .modal-details {
-      display: flex;
-      gap: 10px;
-      margin-top: 14px;
-    }
+    .modal-name  { font-size: 1.45rem; font-weight: 800; }
+    .modal-group { font-size: .83rem; color: var(--text-muted); margin-top: 2px; }
+    .modal-details { display: flex; gap: 10px; margin-top: 14px; }
     .detail-box {
       flex: 1;
       background: var(--bg);
@@ -275,74 +358,38 @@
       padding: 10px;
       text-align: center;
     }
-    .detail-box .d-label { font-size: .65rem; color: var(--text-muted); font-weight: 600; margin-bottom: 3px; }
-    .detail-box .d-value { font-size: 1.1rem; font-weight: 800; }
+    .d-label { font-size: .64rem; color: var(--text-muted); font-weight: 600; margin-bottom: 3px; }
+    .d-value { font-size: 1.05rem; font-weight: 800; }
     .modal-close {
       width: 100%;
-      margin-top: 16px;
+      margin-top: 14px;
       padding: 10px;
       border-radius: 10px;
       border: none;
       background: var(--primary);
       color: #fff;
-      font-size: .9rem;
+      font-size: .88rem;
       font-weight: 700;
       cursor: pointer;
       transition: background .2s;
     }
     .modal-close:hover { background: var(--primary-dark); }
 
-    /* ── 전체보기 탭 ── */
-    .group-section { margin-bottom: 28px; }
-    .group-header {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 12px 16px;
-      background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 100%);
-      color: #fff;
-      font-weight: 700;
-      font-size: .95rem;
-    }
-    .group-header .g-count {
-      margin-left: auto;
-      background: rgba(255,255,255,.25);
-      padding: 2px 10px;
-      border-radius: 10px;
-      font-size: .78rem;
-    }
-
     /* ── 빈 상태 ── */
-    .empty-state {
-      text-align: center;
-      padding: 60px 20px;
-      color: var(--text-muted);
-    }
-    .empty-state .icon { font-size: 3rem; margin-bottom: 12px; }
-    .empty-state p { font-size: .9rem; }
-
-    /* ── 검색 ── */
-    .search-wrap {
-      padding: 12px 16px 0;
-    }
-    .search-input {
-      width: 100%;
-      padding: 10px 16px;
-      border-radius: 12px;
-      border: 1.5px solid var(--border);
-      font-size: .9rem;
-      outline: none;
-      transition: border-color .2s;
-    }
-    .search-input:focus { border-color: var(--primary-light); }
+    .empty-state { text-align: center; padding: 60px 20px; color: var(--text-muted); }
+    .empty-state .icon { font-size: 3rem; margin-bottom: 10px; }
+    .empty-state p { font-size: .88rem; }
 
     /* ── 반응형 ── */
     @media (max-width: 480px) {
-      header h1 { font-size: 1.2rem; }
+      header h1 { font-size: 1.15rem; }
       .grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 10px; padding: 12px; }
+      .search-stats { flex-wrap: wrap; }
+      .stats-bar { gap: 7px; }
     }
     @media (min-width: 768px) {
       .grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+      .list-view { padding: 12px 20px 20px; }
     }
   </style>
 </head>
@@ -363,37 +410,55 @@
   <div class="filter-group">
     <span class="filter-label">역할</span>
     <button class="chip active" data-role="all">전체</button>
-    <button class="chip leader" data-role="순장">순장</button>
+    <button class="chip leader"  data-role="순장">순장</button>
     <button class="chip vleader" data-role="부순장">부순장</button>
-    <button class="chip member" data-role="순원">순원</button>
+    <button class="chip member"  data-role="순원">순원</button>
   </div>
   <div class="filter-group">
     <span class="filter-label">성별</span>
     <button class="chip active" data-gender="all">전체</button>
-    <button class="chip male" data-gender="남">남</button>
+    <button class="chip male"   data-gender="남">남</button>
     <button class="chip female" data-gender="여">여</button>
   </div>
   <div class="filter-group" id="yearFilterGroup">
     <span class="filter-label">또래</span>
-    <!-- JS로 동적 생성 -->
+  </div>
+
+  <!-- 뷰 토글 -->
+  <div class="view-toggle" style="margin-left:auto">
+    <button class="view-btn active" id="btnCard" title="카드보기">
+      <svg viewBox="0 0 16 16" fill="currentColor">
+        <rect x="1" y="1" width="6" height="6" rx="1.2"/>
+        <rect x="9" y="1" width="6" height="6" rx="1.2"/>
+        <rect x="1" y="9" width="6" height="6" rx="1.2"/>
+        <rect x="9" y="9" width="6" height="6" rx="1.2"/>
+      </svg>
+      카드
+    </button>
+    <button class="view-btn" id="btnList" title="목록보기">
+      <svg viewBox="0 0 16 16" fill="currentColor">
+        <rect x="1" y="2"  width="14" height="2.5" rx="1.2"/>
+        <rect x="1" y="6.8" width="14" height="2.5" rx="1.2"/>
+        <rect x="1" y="11.5" width="14" height="2.5" rx="1.2"/>
+      </svg>
+      목록
+    </button>
   </div>
 </div>
 
-<!-- 검색 -->
-<div class="search-wrap">
+<!-- 검색 + 통계 -->
+<div class="search-stats">
   <input class="search-input" type="text" id="searchInput" placeholder="이름으로 검색..." />
+  <div class="stats-bar" id="statsBar"></div>
 </div>
-
-<!-- 통계 -->
-<div class="stats-bar" id="statsBar"></div>
 
 <!-- 컨텐츠 -->
 <div id="mainContent"></div>
 
 <!-- 모달 -->
-<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
-  <div class="modal" id="modal">
-    <div id="modalPhoto"></div>
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <div id="modalPhotoWrap" class="modal-photo-wrap"></div>
     <div class="modal-content">
       <div id="modalRoleBadge"></div>
       <div class="modal-name" id="modalName"></div>
@@ -408,27 +473,34 @@
           <div class="d-value" id="modalYear"></div>
         </div>
       </div>
-      <button class="modal-close" onclick="document.getElementById('modalOverlay').classList.remove('open')">닫기</button>
+      <button class="modal-close" id="modalCloseBtn">닫기</button>
     </div>
   </div>
 </div>
 
 <script>
-let allGroups = [];
+let allGroups  = [];
 let currentTab = 'all';
 let filterRole   = 'all';
 let filterGender = 'all';
 let filterYear   = 'all';
 let searchQuery  = '';
+let viewMode     = 'card'; // 'card' | 'list'
+
+// 멤버 데이터를 ID로 조회 (inline onclick 대신 사용)
+const memberStore = new Map();
+let memberSeq = 0;
 
 async function init() {
   const res = await fetch('data.json');
   allGroups = await res.json();
   buildTabs();
   buildYearFilters();
+  setupEvents();
   render();
 }
 
+/* ── 탭 ── */
 function buildTabs() {
   const nav = document.getElementById('tabNav');
   allGroups.forEach(g => {
@@ -448,16 +520,19 @@ function buildTabs() {
   });
 }
 
+/* ── 또래 필터 ── */
 function buildYearFilters() {
   const years = new Set();
   allGroups.forEach(g => g.members.forEach(m => { if (m.year) years.add(m.year); }));
   const sorted = [...years].sort();
   const group = document.getElementById('yearFilterGroup');
+
   const allBtn = document.createElement('button');
   allBtn.className = 'chip year active';
   allBtn.dataset.year = 'all';
   allBtn.textContent = '전체';
   group.appendChild(allBtn);
+
   sorted.forEach(y => {
     const btn = document.createElement('button');
     btn.className = 'chip year';
@@ -465,9 +540,10 @@ function buildYearFilters() {
     btn.textContent = "'" + y + "년";
     group.appendChild(btn);
   });
+
   group.addEventListener('click', e => {
-    const btn = e.target.closest('.chip');
-    if (!btn || !btn.dataset.year) return;
+    const btn = e.target.closest('.chip[data-year]');
+    if (!btn) return;
     group.querySelectorAll('.chip').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     filterYear = btn.dataset.year;
@@ -475,157 +551,248 @@ function buildYearFilters() {
   });
 }
 
-// 필터 버튼 이벤트
-document.getElementById('filterBar').addEventListener('click', e => {
-  const btn = e.target.closest('.chip');
-  if (!btn) return;
-  if (btn.dataset.role !== undefined) {
-    document.querySelectorAll('[data-role]').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    filterRole = btn.dataset.role;
-    render();
-  }
-  if (btn.dataset.gender !== undefined) {
-    document.querySelectorAll('[data-gender]').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    filterGender = btn.dataset.gender;
-    render();
-  }
-});
+/* ── 이벤트 연결 ── */
+function setupEvents() {
+  // 역할/성별 필터
+  document.getElementById('filterBar').addEventListener('click', e => {
+    const btn = e.target.closest('.chip');
+    if (!btn) return;
+    if ('role' in btn.dataset) {
+      document.querySelectorAll('[data-role]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      filterRole = btn.dataset.role;
+      render();
+    }
+    if ('gender' in btn.dataset) {
+      document.querySelectorAll('[data-gender]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      filterGender = btn.dataset.gender;
+      render();
+    }
+  });
 
-document.getElementById('searchInput').addEventListener('input', e => {
-  searchQuery = e.target.value.trim();
-  render();
-});
+  // 검색
+  document.getElementById('searchInput').addEventListener('input', e => {
+    searchQuery = e.target.value.trim();
+    render();
+  });
 
+  // 카드/목록 토글
+  document.getElementById('btnCard').addEventListener('click', () => {
+    viewMode = 'card';
+    document.getElementById('btnCard').classList.add('active');
+    document.getElementById('btnList').classList.remove('active');
+    render();
+  });
+  document.getElementById('btnList').addEventListener('click', () => {
+    viewMode = 'list';
+    document.getElementById('btnList').classList.add('active');
+    document.getElementById('btnCard').classList.remove('active');
+    render();
+  });
+
+  // 카드/목록 클릭 → 모달 (이벤트 위임)
+  document.getElementById('mainContent').addEventListener('click', e => {
+    const el = e.target.closest('[data-mid]');
+    if (!el) return;
+    const data = memberStore.get(Number(el.dataset.mid));
+    if (data) openModal(data);
+  });
+
+  // 이미지 에러 처리 (이벤트 위임, capture 단계)
+  document.getElementById('mainContent').addEventListener('error', e => {
+    if (e.target.tagName !== 'IMG') return;
+    const img = e.target;
+    const g = img.dataset.gender || '';
+    const emoji = g === '남' ? '👨' : '👩';
+    const parent = img.parentElement;
+    if (parent.classList.contains('card-photo')) {
+      // 카드 뷰: 1:1 no-photo div로 교체
+      const div = document.createElement('div');
+      div.className = 'no-photo ' + g;
+      div.textContent = emoji;
+      parent.replaceWith(div);
+    } else if (parent.classList.contains('list-photo')) {
+      // 목록 뷰: 원형 no-photo div로 교체
+      const div = document.createElement('div');
+      div.className = 'list-no-photo ' + g;
+      div.textContent = emoji;
+      parent.replaceWith(div);
+    }
+  }, true);
+
+  // 모달 닫기
+  document.getElementById('modalOverlay').addEventListener('click', e => {
+    if (e.target === document.getElementById('modalOverlay')) closeModal();
+  });
+  document.getElementById('modalCloseBtn').addEventListener('click', closeModal);
+
+  // 모달 이미지 에러
+  document.getElementById('modalPhotoWrap').addEventListener('error', e => {
+    if (e.target.tagName !== 'IMG') return;
+    const g = e.target.dataset.gender || '';
+    document.getElementById('modalPhotoWrap').innerHTML =
+      '<span class="modal-no-photo">' + (g === '남' ? '👨' : '👩') + '</span>';
+  }, true);
+}
+
+/* ── 유틸 ── */
 function getRole(role) {
   if (role === '순장') return '순장';
   if (role === '부순장') return '부순장';
   return '순원';
 }
-
 function applyFilters(members) {
   return members.filter(m => {
     const r = getRole(m.role);
-    if (filterRole !== 'all' && r !== filterRole) return false;
+    if (filterRole   !== 'all' && r !== filterRole) return false;
     if (filterGender !== 'all' && m.gender.trim() !== filterGender) return false;
-    if (filterYear !== 'all' && m.year !== filterYear) return false;
-    if (searchQuery && !m.name.includes(searchQuery)) return false;
+    if (filterYear   !== 'all' && m.year !== filterYear) return false;
+    if (searchQuery  && !m.name.includes(searchQuery)) return false;
     return true;
   });
 }
-
 function sortMembers(members) {
   const order = { '순장': 0, '부순장': 1 };
-  return [...members].sort((a, b) => {
-    const oa = order[a.role] ?? 2;
-    const ob = order[b.role] ?? 2;
-    return oa - ob;
-  });
+  return [...members].sort((a, b) => (order[a.role] ?? 2) - (order[b.role] ?? 2));
 }
 
+/* ── 카드 렌더 ── */
 function renderCard(m, groupName) {
+  const id  = memberSeq++;
+  memberStore.set(id, { ...m, groupName });
   const role = getRole(m.role);
-  const roleClass = role === '순장' ? 'role-leader' : role === '부순장' ? 'role-vleader' : '';
+  const roleClass  = role === '순장' ? 'role-leader' : role === '부순장' ? 'role-vleader' : '';
   const badgeClass = role === '순장' ? 'badge-leader' : role === '부순장' ? 'badge-vleader' : 'badge-member';
-  const genderClass = m.gender.trim();
+  const g = m.gender.trim();
+  const emoji = g === '남' ? '👨' : '👩';
 
   const photoHTML = m.photo
-    ? `<div class="card-photo"><img src="images/${m.photo}" alt="${m.name}" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\\"no-photo ${genderClass}\\">${m.gender.trim()==='남'?'👨':'👩'}</div>'" /></div>`
-    : `<div class="no-photo ${genderClass}">${m.gender.trim() === '남' ? '👨' : '👩'}</div>`;
+    ? `<div class="card-photo"><img src="images/${m.photo}" alt="${m.name}" loading="lazy" data-gender="${g}" /></div>`
+    : `<div class="no-photo ${g}">${emoji}</div>`;
 
-  return `
-    <div class="card ${roleClass}" onclick='openModal(${JSON.stringify(m)}, "${groupName}")'>
-      ${photoHTML}
-      <div class="card-body">
-        <div class="card-role-badge ${badgeClass}">${role}</div>
-        <div class="card-name">${m.name}</div>
-        <div class="card-meta">
-          <span class="gender-tag ${genderClass}">${m.gender.trim()}</span>
-          <span class="year-tag">'${m.year}</span>
-        </div>
+  return `<div class="card ${roleClass}" data-mid="${id}">
+    ${photoHTML}
+    <div class="card-body">
+      <div class="card-role-badge ${badgeClass}">${role}</div>
+      <div class="card-name">${m.name}</div>
+      <div class="card-meta">
+        <span class="gender-tag ${g}">${g}</span>
+        <span class="year-tag">'${m.year}</span>
       </div>
-    </div>`;
+    </div>
+  </div>`;
 }
 
-function updateStats(members) {
-  const total  = members.length;
-  const male   = members.filter(m => m.gender.trim() === '남').length;
-  const female = members.filter(m => m.gender.trim() === '여').length;
-  const leaders = members.filter(m => m.role === '순장').length;
-  const vleaders = members.filter(m => m.role === '부순장').length;
-  const regular = members.filter(m => getRole(m.role) === '순원').length;
+/* ── 목록 렌더 ── */
+function renderListItem(m, groupName) {
+  const id  = memberSeq++;
+  memberStore.set(id, { ...m, groupName });
+  const role = getRole(m.role);
+  const roleClass  = role === '순장' ? 'role-leader' : role === '부순장' ? 'role-vleader' : '';
+  const badgeClass = role === '순장' ? 'badge-leader' : role === '부순장' ? 'badge-vleader' : 'badge-member';
+  const g = m.gender.trim();
+  const emoji = g === '남' ? '👨' : '👩';
 
+  const photoHTML = m.photo
+    ? `<div class="list-photo"><img src="images/${m.photo}" alt="${m.name}" loading="lazy" data-gender="${g}" /></div>`
+    : `<div class="list-no-photo ${g}">${emoji}</div>`;
+
+  return `<div class="list-item ${roleClass}" data-mid="${id}">
+    ${photoHTML}
+    <div class="list-info">
+      <div class="list-name">${m.name}</div>
+      <div class="list-sub">
+        <span class="card-role-badge ${badgeClass}" style="margin:0">${role}</span>
+        <span class="gender-tag ${g}">${g}</span>
+      </div>
+    </div>
+    <div class="list-right">
+      <span class="year-tag">'${m.year}</span>
+      ${currentTab === 'all' ? `<span style="font-size:.68rem;color:var(--text-muted)">${groupName}</span>` : ''}
+    </div>
+  </div>`;
+}
+
+/* ── 통계 ── */
+function updateStats(members) {
+  const total    = members.length;
+  const male     = members.filter(m => m.gender.trim() === '남').length;
+  const female   = members.filter(m => m.gender.trim() === '여').length;
+  const leaders  = members.filter(m => m.role === '순장').length;
+  const vleaders = members.filter(m => m.role === '부순장').length;
+  const regular  = members.filter(m => getRole(m.role) === '순원').length;
   document.getElementById('statsBar').innerHTML = `
     <span class="stat-item"><span class="stat-dot" style="background:#64748b"></span><span class="stat-val">${total}</span><span class="stat-lbl">명</span></span>
     <span class="stat-item"><span class="stat-dot" style="background:var(--male)"></span><span class="stat-val">${male}</span><span class="stat-lbl">남</span></span>
     <span class="stat-item"><span class="stat-dot" style="background:var(--female)"></span><span class="stat-val">${female}</span><span class="stat-lbl">여</span></span>
     <span class="stat-item"><span class="stat-dot" style="background:var(--leader)"></span><span class="stat-val">${leaders}</span><span class="stat-lbl">순장</span></span>
     <span class="stat-item"><span class="stat-dot" style="background:var(--vleader)"></span><span class="stat-val">${vleaders}</span><span class="stat-lbl">부순장</span></span>
-    <span class="stat-item"><span class="stat-dot" style="background:#10b981"></span><span class="stat-val">${regular}</span><span class="stat-lbl">순원</span></span>
-  `;
+    <span class="stat-item"><span class="stat-dot" style="background:#10b981"></span><span class="stat-val">${regular}</span><span class="stat-lbl">순원</span></span>`;
 }
 
+/* ── 메인 렌더 ── */
 function render() {
+  memberStore.clear();
+  memberSeq = 0;
   const content = document.getElementById('mainContent');
+  const renderItem = viewMode === 'card' ? renderCard : renderListItem;
+  const wrapClass  = viewMode === 'card' ? 'grid' : 'list-view';
 
   if (currentTab === 'all') {
-    // 전체보기
     let html = '';
-    let allFiltered = [];
+    const allFiltered = [];
     allGroups.forEach(g => {
       const filtered = applyFilters(sortMembers(g.members));
+      if (!filtered.length) return;
       allFiltered.push(...filtered);
-      if (filtered.length === 0) return;
-      html += `
-        <div class="group-section">
-          <div class="group-header">
-            <span>⛪ ${g.name}</span>
-            <span class="g-count">${filtered.length}명</span>
-          </div>
-          <div class="grid">${filtered.map(m => renderCard(m, g.name)).join('')}</div>
-        </div>`;
+      html += `<div class="group-section">
+        <div class="group-header"><span>⛪ ${g.name}</span><span class="g-count">${filtered.length}명</span></div>
+        <div class="${wrapClass}">${filtered.map(m => renderItem(m, g.name)).join('')}</div>
+      </div>`;
     });
-    if (!html) html = `<div class="empty-state"><div class="icon">🔍</div><p>검색 결과가 없습니다.</p></div>`;
-    content.innerHTML = html;
+    content.innerHTML = html || `<div class="empty-state"><div class="icon">🔍</div><p>검색 결과가 없습니다.</p></div>`;
     updateStats(allFiltered);
   } else {
     const g = allGroups.find(g => String(g.id) === currentTab);
     if (!g) return;
     const filtered = applyFilters(sortMembers(g.members));
     updateStats(filtered);
-    if (filtered.length === 0) {
-      content.innerHTML = `<div class="empty-state"><div class="icon">🔍</div><p>검색 결과가 없습니다.</p></div>`;
-      return;
-    }
-    content.innerHTML = `<div class="grid">${filtered.map(m => renderCard(m, g.name)).join('')}</div>`;
+    content.innerHTML = filtered.length
+      ? `<div class="${wrapClass}">${filtered.map(m => renderItem(m, g.name)).join('')}</div>`
+      : `<div class="empty-state"><div class="icon">🔍</div><p>검색 결과가 없습니다.</p></div>`;
   }
 }
 
-function openModal(member, groupName) {
-  const role = getRole(member.role);
+/* ── 모달 ── */
+function openModal(data) {
+  const role = getRole(data.role);
   const badgeClass = role === '순장' ? 'badge-leader' : role === '부순장' ? 'badge-vleader' : 'badge-member';
-  const gClass = member.gender.trim();
+  const g = data.gender.trim();
+  const emoji = g === '남' ? '👨' : '👩';
 
-  const photoEl = document.getElementById('modalPhoto');
-  if (member.photo) {
-    photoEl.innerHTML = `<div class="modal-photo"><img src="images/${member.photo}" alt="${member.name}" onerror="this.parentElement.innerHTML='${member.gender.trim()==='남'?'👨':'👩'}'" /></div>`;
+  const wrap = document.getElementById('modalPhotoWrap');
+  if (data.photo) {
+    const img = document.createElement('img');
+    img.src = 'images/' + data.photo;
+    img.alt = data.name;
+    img.dataset.gender = g;
+    wrap.innerHTML = '';
+    wrap.appendChild(img);
   } else {
-    photoEl.innerHTML = `<div class="modal-photo no-photo ${gClass}" style="font-size:5rem;height:180px">${member.gender.trim() === '남' ? '👨' : '👩'}</div>`;
+    wrap.innerHTML = '<span class="modal-no-photo">' + emoji + '</span>';
   }
 
-  document.getElementById('modalRoleBadge').innerHTML = `<span class="modal-role-badge ${badgeClass}">${role}</span>`;
-  document.getElementById('modalName').textContent = member.name;
-  document.getElementById('modalGroup').textContent = `53교구 ${groupName}`;
-  document.getElementById('modalGender').textContent = member.gender.trim() === '남' ? '👨 남' : '👩 여';
-  document.getElementById('modalYear').textContent = `'${member.year}년`;
+  document.getElementById('modalRoleBadge').innerHTML =
+    `<span class="modal-role-badge ${badgeClass}">${role}</span>`;
+  document.getElementById('modalName').textContent  = data.name;
+  document.getElementById('modalGroup').textContent = `53교구 ${data.groupName}`;
+  document.getElementById('modalGender').textContent = emoji + ' ' + g;
+  document.getElementById('modalYear').textContent   = "'" + data.year + "년";
   document.getElementById('modalOverlay').classList.add('open');
 }
-
-function closeModal(e) {
-  if (e.target === document.getElementById('modalOverlay')) {
-    document.getElementById('modalOverlay').classList.remove('open');
-  }
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
 }
 
 init();
