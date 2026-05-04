@@ -2230,6 +2230,20 @@
         "gender": "여",
         "year": "00",
         "photo": "image232.png"
+      },
+      {
+        "role": "5",
+        "name": "김대환",
+        "gender": "남",
+        "year": "00",
+        "photo": "image234.png"
+      },
+      {
+        "role": "6",
+        "name": "이영균",
+        "gender": "남",
+        "year": "00",
+        "photo": "image235.png"
       }
     ]
   }
