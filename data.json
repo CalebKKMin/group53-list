@@ -1791,7 +1791,7 @@
         "name": "정서영",
         "gender": "여",
         "year": "00",
-        "photo": null
+        "photo": "image236.png"
       },
       {
         "role": "23",
@@ -2174,7 +2174,7 @@
         "name": "김다현",
         "gender": "여",
         "year": "00",
-        "photo": "image215.jpeg"
+        "photo": "image215.png"
       },
       {
         "role": "24",
@@ -2244,6 +2244,13 @@
         "gender": "남",
         "year": "00",
         "photo": "image235.png"
+      },
+      {
+        "role": "7",
+        "name": "이시윤",
+        "gender": "여",
+        "year": "98",
+        "photo": "image237.png"
       }
     ]
   }
