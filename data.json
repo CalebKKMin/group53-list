@@ -176,7 +176,7 @@
         "name": "김세리",
         "gender": "여",
         "year": "00",
-        "photo": null
+        "photo": "image238.png"
       },
       {
         "role": "24",
@@ -553,6 +553,13 @@
         "gender": "남",
         "year": "97",
         "photo": null
+      },
+      {
+        "role": "23",
+        "name": "김용국",
+        "gender": "남",
+        "year": "99",
+        "photo": "image239.png"
       }
     ]
   },
