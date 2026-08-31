@@ -176,7 +176,7 @@
         "name": "김세리",
         "gender": "여",
         "year": "00",
-        "photo": null
+        "photo": "image240.png"
       },
       {
         "role": "24",
@@ -553,6 +553,13 @@
         "gender": "남",
         "year": "97",
         "photo": null
+      },
+      {
+        "role": "23",
+        "name": "김용국",
+        "gender": "남",
+        "year": "99",
+        "photo": "image241.png"
       }
     ]
   },
@@ -2271,14 +2278,14 @@
         "name": "문소영",
         "gender": "여",
         "year": "96",
-        "photo": "image240.png"
+        "photo": "image243.png"
       },
       {
         "role": "11",
         "name": "최가은",
         "gender": "여",
         "year": "00",
-        "photo": "image241.png"
+        "photo": "image244.png"
       },
       {
         "role": "12",
