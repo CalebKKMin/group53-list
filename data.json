@@ -2265,6 +2265,27 @@
         "gender": "남",
         "year": "99",
         "photo": "image239.png"
+      },
+      {
+        "role": "10",
+        "name": "문소영",
+        "gender": "여",
+        "year": "96",
+        "photo": "image240.png"
+      },
+      {
+        "role": "11",
+        "name": "최가은",
+        "gender": "여",
+        "year": "00",
+        "photo": "image241.png"
+      },
+      {
+        "role": "12",
+        "name": "박정준",
+        "gender": "남",
+        "year": "94",
+        "photo": "image242.png"
       }
     ]
   }
