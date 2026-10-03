@@ -560,6 +560,20 @@
         "gender": "남",
         "year": "99",
         "photo": "image241.png"
+      },
+      {
+        "role": "24",
+        "name": "김승환",
+        "gender": "남",
+        "year": "00",
+        "photo": "image246.png"
+      },
+      {
+        "role": "25",
+        "name": "강민구",
+        "gender": "남",
+        "year": "99",
+        "photo": "image247.png"
       }
     ]
   },
