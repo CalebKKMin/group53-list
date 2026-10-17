@@ -574,6 +574,13 @@
         "gender": "남",
         "year": "99",
         "photo": "image247.png"
+      },
+      {
+        "role": "26",
+        "name": "정채은",
+        "gender": "여",
+        "year": "00",
+        "photo": "image249.png"
       }
     ]
   },
@@ -1986,7 +1993,7 @@
         "name": "김주혜",
         "gender": "여",
         "year": "00",
-        "photo": null
+        "photo": "image248.png"
       },
       {
         "role": "19",
